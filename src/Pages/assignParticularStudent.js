@@ -12,12 +12,12 @@ export default function AssignParticularStudent() {
     })
 
     const getMentorName = async () => {
-        const { data } = await axios.get("http://localhost:3001/getmentors");
+        const { data } = await axios.get("https://assign-mentor-api-01.herokuapp.com/getmentors");
         return data;
     }
 
     const getStudentName = async () => {
-        const { data } = await axios.get("http://localhost:3001/getallstudents");
+        const { data } = await axios.get("https://assign-mentor-api-01.herokuapp.com/getallstudents");
         return data;
     }
 
@@ -36,7 +36,7 @@ export default function AssignParticularStudent() {
     const handleSubmit = async () => {
         try {
             const { studentid, mentorid } = state;
-            const { data } = await axios.post("http://localhost:3001/assignonementor", {
+            const { data } = await axios.post("https://assign-mentor-api-01.herokuapp.com/assignonementor", {
                 studentid,
                 mentorid
             })

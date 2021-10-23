@@ -23,7 +23,7 @@ export default function Creatementor() {
         else {
             try {
                 const { mentorname, mentormailid, mentorphno } = state;
-                const { data } = await axios.post("http://localhost:3001/creatementor", {
+                const { data } = await axios.post("https://assign-mentor-api-01.herokuapp.com/creatementor", {
                     mentorname,
                     mentormailid,
                     mentorphno,

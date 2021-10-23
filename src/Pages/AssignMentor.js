@@ -14,12 +14,12 @@ export default function Assignmentor() {
 
     const [studentid, setStudentid] = useState([])
     const getMentorName = async () => {
-        const { data } = await axios.get("http://localhost:3001/getmentors");
+        const { data } = await axios.get("https://assign-mentor-api-01.herokuapp.com/getmentors");
         return data;
     }
 
     const getStudentName = async () => {
-        const { data } = await axios.get("http://localhost:3001/getstudents");
+        const { data } = await axios.get("https://assign-mentor-api-01.herokuapp.com/getstudents");
         return data;
     }
 

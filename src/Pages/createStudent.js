@@ -25,7 +25,7 @@ export default function Createstudent() {
         else {
             try {
                 const { studentname, studentmailid, studentphno, studentbatch } = state;
-                const { data } = await axios.post("http://localhost:3001/createstudent", {
+                const { data } = await axios.post("https://assign-mentor-api-01.herokuapp.com/createstudent", {
                     studentname,
                     studentmailid,
                     studentphno,
